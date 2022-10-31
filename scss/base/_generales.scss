@@ -14,7 +14,7 @@ html{
 }
 
 .titleMain h2{
-    @include title-h2 (center, $color-ppal, #fff)
+    @include title-h2 (center, $color-ppal, #fff);
     margin: 30px 0px 30px 0px;
 }
 
