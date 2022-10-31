@@ -1,0 +1,61 @@
+@import "../base/variables";
+/************* FOOTER *********/
+footer {
+    .fixed {
+        div {
+            img {
+                position: fixed;
+                right: 1%;
+                bottom: 2%;
+                text-align: center;
+                width: 30px;
+                height: 30px;
+            }
+        }
+    }
+    font-size: 13px;
+        .mainFooter {
+            background-color: #777;
+            list-style: none;
+            color: #fff;
+            display: flex;
+            justify-content: space-evenly;
+            align-items: top;
+            padding: 20px;
+            margin-top: 40px;
+            div {
+                li {
+                    a {
+                        display: block;
+                        color: $color-secundario;
+                        text-decoration: none;
+                        &:hover {
+                            display: block;
+                            color: $color-secundario;
+                            text-decoration: none;
+                            color:$color-ppal;
+                            font-weight: bold;
+                        }
+                    }
+                }
+                h3 {
+                    padding: 0px 0px 15px 0px;
+                    font-size: nth($font-size, 3);
+                    letter-spacing: 1px;
+                }
+                .news{
+                    display: flex;
+                    flex-direction: column;
+                    input{
+                        @extend %input;
+                    }
+                }
+            }
+        }
+        .bottonFooter{
+            background-color: #5b5b5b;
+            color:#fff;
+            text-align: center;
+            padding:10px;
+        }
+}

@@ -1,0 +1,67 @@
+@import "../base/variables";
+/************* HEADER *********/
+header {
+    position: sticky;
+    top: 0%;
+    z-index: 1;
+
+    .topHeader {
+        background-color: $color-ppal;
+        display: flex;
+        top: 0%;
+        font-size: 12px !important;
+        font-weight: bold;
+        justify-content: space-between;
+        align-items: center;
+        color: white;
+        letter-spacing: 1px;
+        padding: 0px 80px 0px 80px;
+
+        span {
+            top: 0%;
+            padding: 5px;
+        }
+
+        div {
+            a {
+                font-size: 10px;
+                padding: 0px 10px 0px 10px;
+                color: white;
+                border-left: 1px solid rgba(255, 255, 255, 0.527);
+                text-decoration: none;
+
+                .newsTop {
+                    border-right: 1px solid rgba(255, 255, 255, 0.527);
+                    text-decoration: none;
+                }
+            }
+        }
+    }
+
+    .navbar {
+        padding-top: 0px;
+        padding-bottom: 0px;
+
+        .logo {
+            width: 200px;
+            height: auto;
+            padding: 5%;
+        }
+
+        div {
+            .navbar-nav {
+                .nav-link {
+                    &:hover {
+                        color: $color-ppal;
+                        font-weight: bold;
+                    }
+                }
+            }
+
+            .d-flex {
+                margin-right: 30px;
+            }
+        }
+
+    }
+}

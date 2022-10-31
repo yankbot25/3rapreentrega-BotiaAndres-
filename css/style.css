@@ -1,0 +1,548 @@
+@import url('https://fonts.googleapis.com/css2?family=Red+Hat+Display:ital,wght@0,300;0,500;0,800;1,300;1,400&display=swap');
+ 
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Red Hat Display', sans-serif;
+    text-decoration: none;
+}
+/*************HEADER**************/
+
+html{
+    scroll-behavior: smooth;
+}
+
+.grid-contenedor{
+    width: 90%;
+    margin: 20px auto;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: auto auto;
+    gap: 10px;
+    grid-template-areas:
+    "hero hero hero"
+    "cards cards cards"
+    ;
+}
+
+.navbar {
+    padding-top: 0px;
+    padding-bottom: 0px;
+    
+}
+
+header{
+    position: sticky;
+    top: 0%;
+    z-index: 1;
+}
+
+header .topHeader{
+    background-color: #1fdf5e;
+    display: flex;
+    top: 0%;
+    font-size: 12px !important;
+    font-weight: bold;
+    justify-content: space-between;
+    align-items: center;
+    color: white;
+    letter-spacing: 1px;
+    padding: 0px 80px 0px 80px;
+}
+
+header .topHeader span{
+    top:0%;
+    padding: 5px;
+}
+
+header .topHeader div a{
+    font-size: 10px;
+    padding: 0px 10px 0px 10px;
+    color: white;
+    border-left: 1px solid rgba(255, 255, 255, 0.527);
+    text-decoration: none;
+}
+
+.newsTop{
+    border-right: 1px solid rgba(255, 255, 255, 0.527);
+    text-decoration: none;
+}
+
+
+@media (max-width: 750px) {
+    header .topHeader span {
+        display: none;
+    }
+    header .topHeader{
+        display: flex;
+        justify-content: center;
+        padding: 5px;
+    }
+    .container-fluid{
+        display: flex;
+        flex-direction: row-reverse;
+    }
+    .buscador{
+        display: none !important;
+    }
+    
+    .LineaIzq {
+        border-top: 1px solid rgb(124, 122, 122);
+        padding-top: 20px;
+    }
+
+    .cartImage{
+        display: none;
+    }
+}
+
+@media (min-width: 750px){
+    .LineaIzq {
+        border-right: 1px solid rgb(124, 122, 122);
+    }
+    .mb-2 {
+        margin-bottom: 0px !important;
+    }
+
+}
+
+
+
+.navbar .navbar-nav .nav-link:hover {
+    color:#1fdf5e;
+    font-weight: bold;
+}
+
+.d-flex {
+    margin-right: 30px;
+}
+
+.logo {
+    width: 200px;
+    height: auto;
+    padding: 5%;
+}
+
+.btn{
+    border: 1px solid black;
+    border-radius: 5px;
+}
+
+.btn-success{
+    border: rgba(0, 0, 0, 0);
+}
+
+
+.btn:hover{
+    background-color: black;
+    color: white;
+    
+}
+
+
+/*************MAIN**************/
+
+.bannerHero{
+    grid-area: hero;
+}
+
+.bannerTable{
+    grid-area: cards;
+}
+
+.bannerHero{
+    background-image: url(../img/BannerHero.jpg);
+    background-size: cover;
+    background-position: center;
+    width: 100%;
+    height: 400px;
+    border-radius: 15px;
+    display: block;
+    margin: auto;
+}
+
+.containerBtn{
+    text-align: right;
+    padding-top: 150px;
+    padding-right: 40px;
+}
+
+
+
+.bannerHero div h2{
+    margin: 20px;
+}
+
+.bannerHero div div{
+    margin-right: 30px;
+}
+
+.bannerHero div div a{
+    padding: 10px 20px 10px 20px;
+    margin: 10px 10px 10px 10px;
+}
+
+.bannerCategoryx3{
+    display: flex;
+    justify-content: center;
+    top: 0%;
+}
+
+@media screen and (max-width: 750px){
+    .bannerCategoryx3{
+        display: flex;
+        flex-direction: column;
+        top: 0%;
+    }
+}
+
+
+.bannerCategoryx3 div{
+    padding: 10px;
+}
+
+.bannerCategoryx3 div h3{
+    text-align: center;
+    background-color: #000;
+    color: white;
+    font-size: 20px;
+}
+
+.bannerCategoryx3 div a{
+    text-decoration: none;
+}
+
+.bannerCategoryx3 div img{
+    border-radius: 15px 15px 0px 0px;
+    width: 100%;
+}
+
+.bannerCategoryx3 div img:hover{
+    transform: scale(98%);
+}
+
+@media screen and (max-width: 750px){
+    .bannerBtn{
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        flex-direction: row;
+        text-align: center;
+    }
+    .bannerHero div div a{
+        padding: 10px 15px 10px 15px;
+        margin: 5px 5px 5px 5px;
+    }
+    .containerBtn{
+        align-items: center;
+        text-align: center;
+        padding-top: 180px;
+        padding-right: 0px;
+    }
+    .btn{
+        background-color: #000;
+        color: white;
+        border: 1px solid black;
+        border-radius: 5px;
+    }
+    
+}
+
+.bannerTable div h2{
+    text-align: center;
+    margin: 15px 0px 15px 0px;
+}
+
+.fixed div img {
+    position: fixed;
+    right: 1%;
+    bottom: 2%;
+    text-align: center;
+    width: 30px;
+    height: 30px;
+}
+
+.titleMain h2{
+    text-align: center;
+    background-color: #1fdf5e;
+    color: #fff;
+    margin: 30px 0px 30px 0px;
+}
+
+.formContainer .form{
+    background: rgba(0, 0, 0, .6);
+    width: 90%;
+    max-width: 650px;
+    margin: auto;
+    padding: 5px 35px;
+    margin-top: 30px;
+    padding-bottom: 30px;
+    border-radius: 3px;
+    padding-top: 30px;
+}
+
+.formContainer .form .formLabel{
+    display: block;
+    color: #1fdf5e;
+    font-size: 16px;
+    position: relative;
+}
+
+.formContainer .form .formInput, .formTextArea{
+    background: rgba(0, 0, 0, .7);
+    border:none;
+    outline: none;
+    border-bottom: 2px solid #1fdf5e;
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 20px;
+    border-radius: 2px;
+    color: #fff;
+}
+
+.formContainer .form .btnSubmit{
+    width: 100%;
+    outline: none;
+    background: #1fdf5e;
+    font-size: 16px;
+    border: none;
+    color: #fff;
+    padding: 15px 0px 15px 0px;
+    border-radius: 5px;
+}
+
+/* .productCategory{
+    display: flex;
+    justify-content: center;
+    margin-left: 5%;
+    margin-right: 5%;
+    top: 0%;
+}
+
+.productCategory div img{
+    width: 250px;
+    height: 250px;
+    border-radius: 15px 15px 0px 0px;
+}
+
+.productCategory div {
+    display: inline-block;
+    text-align: center;
+    margin: 10px;
+    border: 1px solid rgba(161, 161, 163, 0.553);
+    height: 350px;
+    border-radius: 15px;
+}
+
+.productCategory div h3{
+    color: #000;
+
+} */
+.productCategory div a{
+    text-decoration: none;
+}
+
+.productCategory{
+    width: 80%;
+    margin-top: 40px;
+    margin: auto;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    /* grid-auto-rows: 400px ; */
+    gap: 20px
+    ;
+}
+
+.productCategory div h3{
+    font-size: 16px;
+    text-decoration: none;
+    color: black;
+    margin-bottom: 0px;
+    margin-top: 5px;
+}
+
+.productCategory div a img{
+    width: 100%;
+    object-fit: cover;
+    border: solid 1px rgb(242, 240, 240);
+    border-radius: 5px;
+}
+
+.productCategory div a img:hover{
+    border: solid 1px #1fdf5f90;
+}
+
+.list-price{
+    text-decoration:line-through;
+    color: #5b5b5b;
+    margin-left: 10px;
+}
+
+.promo-price{
+    color: #f90505;
+    font-weight: bold;
+}
+
+.best-price{
+    font-weight: bold;
+}
+
+@media screen and (max-width: 750px){
+    .productCategory{
+        width: 90%;
+        margin-top: 40px;
+        margin: auto;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-auto-rows: 350px ;
+        gap: 10px
+        ;
+    }
+    .titleMain h2{
+        text-align: center;
+        background-color: #1fdf5e;
+        color: #fff;
+        margin: 30px 0px 30px 0px;
+        padding: 20px 0px 20px 0px ;
+        font-size: 18px;
+    }
+}
+
+@media screen and (max-width: 500px){
+    .productCategory{
+        width: 90%;
+        margin-top: 40px;
+        margin: auto;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-auto-rows: 250px ;
+        gap: 10px
+        ;
+    }
+    .titleMain h2{
+        text-align: center;
+        background-color: #1fdf5e;
+        color: #fff;
+        margin: 30px 0px 30px 0px;
+        padding: 20px 0px 20px 0px ;
+        font-size: 18px;
+    }
+}
+
+.quienesSomos p{
+    margin: 40px;
+}
+
+.quienesSomos img{
+    width: 100%;
+}
+
+.faq{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    margin: 40px;
+}
+
+.faq div{
+    margin: 15px;
+}
+
+
+
+
+/*************FOOTER**************/
+.mainFooter{
+    background-color: #777;
+    list-style: none;
+    color:#fff;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: top;
+    padding: 20px;
+    margin-top: 40px;
+}
+.bottonFooter{
+    background-color: #5b5b5b;
+    color:#fff;
+    text-align: center;
+    padding:10px;
+}
+
+footer div{
+    font-size: 13px;
+}
+
+footer div div li a {
+    display: block;
+    color: rgb(250, 250, 250);
+    text-decoration: none;
+}
+
+footer div div li a:hover {
+    display: block;
+    color: rgb(250, 250, 250);
+    text-decoration: none;
+    color:#1fdf5e;
+    font-weight: bold;
+}
+
+footer div div h3{
+    padding: 0px 0px 15px 0px;
+    font-size: 14px;
+    letter-spacing: 1px;
+    
+} 
+
+.news input{
+    width: 250px;
+    height: 35px;
+    margin-bottom: 10px;
+}
+
+.news{
+    display: flex;
+    flex-direction: column;
+}
+
+@media screen and (max-width: 750px){
+    .mainFooter{
+        background-color: #777;
+        list-style: none;
+        color:#fff;
+        display: flex;
+        flex-direction: column;
+        align-items: top;
+        padding: 20px;
+        margin-top: 40px;
+    }
+    footer div div h3{
+        border-bottom: solid 1px white;
+        margin-top: 30px;
+        padding: 0px 0px 5px 0px;
+        font-size: 14px;
+        letter-spacing: 1px;
+        
+    }
+    .bottonFooter img{
+        width: 100%;
+        margin-bottom: 10px;
+    } 
+    .fixed div img {
+        position: fixed;
+        right: 1%;
+        bottom: 2%;
+        text-align: center;
+        width: 40px;
+        height: 40px;
+    }
+    .news input{
+        width: 100%;
+        height: 35px;
+        margin-bottom: 10px;
+    }
+
+    
+    
+}
